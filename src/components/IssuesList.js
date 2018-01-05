@@ -11,17 +11,20 @@ class IssuesList extends Component {
         console.log("component did update");
         console.log(prevProps);
         console.log(this.props);
+        if(this.props.language != prevProps.language){
+            axios.get("https://api.github.com/search/issues?q=label:%22good+first+issue%22+language:"+this.props.language+"+state:open&sort=created&order=asc")
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
     }
 
     componentDidMount(){
        console.log("component did mount");
-        axios.get('https://api.github.com/search/issues?q=label:%22good+first+issue%22+language:javascript+state:open&sort=created&order=asc')
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+
     }
 
     render() {
