@@ -19,7 +19,8 @@ class IssuesPage extends Component {
     }
 
     selectLang(value){
-        //console.log("onchange");
+        console.log("onchange");
+        console.log(value);
         this.setState({ lang: value})
     }
 
@@ -30,7 +31,7 @@ class IssuesPage extends Component {
           <h1>First Timers - Open Source Contribution</h1>
         </header>
           <SearchComponent onLangChange={this.selectLang} />
-          <BadgeComponent />
+          <BadgeComponent filterByBadge={this.selectLang} />
         <IssuesList language={this.state.lang} />
       </div>
     );

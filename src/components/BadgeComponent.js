@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import axios from 'axios';
 var LangData = require('./LangData');
 
-const BadgeComponent = () => {
+const BadgeComponent = ({filterByBadge}) => {
 
     return (
 
             <div>
-                <span class="label label-success">Success Label</span>
+                <h4>Filter by popular tags</h4>
+                {LangData.map((lang,index) => {
+                    return(
+                        <span key={index} onClick={filterByBadge.bind(this,lang.name)} className="label badge">{lang.name}</span>)
+            })}
             </div>
 
         )

@@ -13,11 +13,12 @@ class IssuesList extends Component {
     }
 
     componentDidUpdate(prevProps,prevState){
+        let that = this;
         if(this.props.language != prevProps.language){
             axios.get("https://api.github.com/search/issues?q=label:%22good+first+issue%22+language:"+this.props.language+"+state:open&sort=created&order=asc")
                 .then(function (response) {
-
-                    this.setState({
+                    console.log(that);
+                    that.setState({
                         issueList: response.data
                     })
 
@@ -30,6 +31,7 @@ class IssuesList extends Component {
     render() {
         return (
             <div>
+                <div>{this.state.issueList.length}</div>
                 <IssueCard />
             </div>
         );
