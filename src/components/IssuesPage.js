@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import IssuesList from './IssuesList';
 import SearchComponent from './SearchComponent';
 import GithubCorner from 'react-github-corner';
+import BadgeComponent from './BadgeComponent';
 import './App.css';
 
 
@@ -18,7 +19,7 @@ class IssuesPage extends Component {
     }
 
     selectLang(value){
-        console.log("onchange");
+        //console.log("onchange");
         this.setState({ lang: value})
     }
 
@@ -26,9 +27,10 @@ class IssuesPage extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">First Timers</h1>
+          <h1>First Timers - Open Source Contribution</h1>
         </header>
           <SearchComponent onLangChange={this.selectLang} />
+          <BadgeComponent />
         <IssuesList language={this.state.lang} />
       </div>
     );

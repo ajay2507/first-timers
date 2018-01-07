@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-autocomplete'
-var LangData = require('./LangData');
+const LangData = require('./LangData');
 
 /* Autocomplete component to search github languages */
 
