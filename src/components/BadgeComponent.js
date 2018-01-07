@@ -6,7 +6,7 @@ const BadgeComponent = ({filterByBadge}) => {
 
     return (
 
-            <div>
+            <div className="margin-top">
                 <h4>Filter by popular tags</h4>
                 {LangData.map((lang,index) => {
                     return(

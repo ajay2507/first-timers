@@ -1,17 +1,18 @@
 .App {
   text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
 .App-header {
   background-color: #077ABC;
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.margin-top{
+    margin-top: 20px;
 }
 
 .badge{

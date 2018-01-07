@@ -7,11 +7,26 @@ class IssueCard extends Component {
         super(props);
     }
 
+    getRepoName(value){
+        console.log("getRepoName "+value);
+    }
+
     render(){
+        let card = this.props.cardItem;
         return (
 
-            <div>Issue Card</div>
-
+            <div className="card">
+                <div className="card-header">
+                    {this.getRepoName.bind(card.repository_url)}
+                </div>
+                <div className="card-block">
+                    <blockquote className="card-blockquote">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        <a href={card.html_url} class="card-link">View Issue</a>
+                    </blockquote>
+                </div>
+            </div>
         )
     }
 }

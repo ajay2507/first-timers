@@ -26,7 +26,7 @@ class SearchComponent extends Component {
 
      render() {
         return (
-            <div>
+            <div className="margin-top">
                 <label>Select the language/interest :</label>
                 <Autocomplete
                     items={LangData}
