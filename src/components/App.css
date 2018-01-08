@@ -33,6 +33,11 @@ h1, h2, h3, h4{
 
 .card-title-style{
     font-weight:700;
+
+}
+
+.card-title-style a{
+    color: #4b4949 !important;
 }
 
 .badge{

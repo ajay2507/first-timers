@@ -8,24 +8,30 @@ class IssueCard extends Component {
     }
 
     getRepoName(value){
-        console.log("getRepoName "+value);
+        //console.log("getRepoName "+value);
         let stringArray = value.split('/');
         return stringArray[stringArray.length-1];
     }
 
     render(){
         let card = this.props.cardItem;
+        const divStyle = {
+            fontSize: '13px',
+            backgroundColor: '#9E9E9E',
+        };
         return (
 
             <div className="card">
                 <div className="card-header-color card-header">
-                    <h4 className="card-title-style">{this.getRepoName(card.repository_url)}</h4>
+                    <h4 className="card-title-style"><a href={"card.html_url"}>{this.getRepoName(card.repository_url)}</a></h4>
                 </div>
                 <div className="card-block">
                     <blockquote className="card-blockquote">
-                        <h4>{card.title}</h4>
+                        <h5>{card.title}</h5>
                         <p>{card.body}</p>
-                        <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        <footer>{card.labels.map((label,index) => {
+                            return(<span key={index}  style={divStyle} className="badge label">{label.name}</span>)
+                        })}</footer>
                         <a href={card.html_url} className="card-link">View Issue</a>
                     </blockquote>
                 </div>

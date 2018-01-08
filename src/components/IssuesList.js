@@ -35,7 +35,7 @@ class IssuesList extends Component {
             <div>
 
                 {this.state.issueList.items != undefined &&
-                <div className="card-list"><h2>Projects:</h2>
+                <div className="card-list"><h2>{this.props.language+" "}Projects</h2>
                     {this.state.issueList.items.map((item, index) => {
                         return ( <IssueCard cardItem={item} key={index}/>)})}
                 </div>}
