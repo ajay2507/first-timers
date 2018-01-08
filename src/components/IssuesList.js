@@ -35,9 +35,9 @@ class IssuesList extends Component {
             <div>
 
                 {this.state.issueList.items != undefined &&
-                <div><h2>Projects:</h2>
-                    {this.state.issueList.items.map((item) => {
-                        return ( <IssueCard cardItem={item} />)})}
+                <div className="card-list"><h2>Projects:</h2>
+                    {this.state.issueList.items.map((item, index) => {
+                        return ( <IssueCard cardItem={item} key={index}/>)})}
                 </div>}
                 {this.state.issueList.length == 0 && <h2>Want to contribute open source! Search the projects with good first issue to contribute</h2>}
             </div></div></div>

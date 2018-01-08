@@ -24,15 +24,15 @@ class SearchComponent extends Component {
         })
     }
 
-     render() {
+    render() {
         return (
             <div className="margin-top">
-                <label>Select the language/interest :</label>
                 <Autocomplete
                     items={LangData}
+
                     shouldItemRender={(item, value) => item.name.toLowerCase().indexOf(value.toLowerCase()) > -1}
                     getItemValue={item => item.name}
-                    inputProps={{ placeholder: 'Search here...' }}
+                    inputProps={{ placeholder: 'Search projects by entering languages here...'}}
                     renderItem={(item, highlighted) =>
                         <div
                             key={item.id}

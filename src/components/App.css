@@ -22,6 +22,19 @@ h1, h2, h3, h4{
     margin-top: 20px;
 }
 
+.card-list{
+    width: 75%;
+    margin-left: 15%;
+}
+
+.card-header-color{
+    background-color:#96c1e5;
+}
+
+.card-title-style{
+    font-weight:700;
+}
+
 .badge{
   font-size: 15px;
   margin-left: 10px;

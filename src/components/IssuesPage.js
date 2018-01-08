@@ -30,8 +30,16 @@ class IssuesPage extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>First Timers - Open Source Contribution</h1>
+          <h2 className="bold">First Timers - Open Source Contribution</h2>
+            <p></p>
         </header>
+          <GithubCorner
+              href={"https://github.com/ajay2507/first-timers"}
+              bannerColor="#70B7FD"
+              octoColor="#fff"
+              size={80}
+              direction="right"
+          />
           <SearchComponent onLangChange={this.selectLang} />
           <BadgeComponent filterByBadge={this.selectLang} />
         <IssuesList language={this.state.lang} />
