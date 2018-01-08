@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import IssuesList from './IssuesList';
 import SearchComponent from './SearchComponent';
-import GithubCorner from 'react-github-corner';
 import BadgeComponent from './BadgeComponent';
+import Footer from './Footer';
+
+import GithubCorner from 'react-github-corner';
 import './App.css';
 
 
@@ -33,6 +35,7 @@ class IssuesPage extends Component {
           <SearchComponent onLangChange={this.selectLang} />
           <BadgeComponent filterByBadge={this.selectLang} />
         <IssuesList language={this.state.lang} />
+          <Footer />
       </div>
     );
   }

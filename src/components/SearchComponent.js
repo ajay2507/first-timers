@@ -32,6 +32,7 @@ class SearchComponent extends Component {
                     items={LangData}
                     shouldItemRender={(item, value) => item.name.toLowerCase().indexOf(value.toLowerCase()) > -1}
                     getItemValue={item => item.name}
+                    inputProps={{ placeholder: 'Search here...' }}
                     renderItem={(item, highlighted) =>
                         <div
                             key={item.id}

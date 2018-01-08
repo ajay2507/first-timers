@@ -36,7 +36,8 @@ class IssuesList extends Component {
 
                 {this.state.issueList.items != undefined &&
                 <div><h2>Projects:</h2>
-                    {this.state.issueList.items.map((item) => { <IssueCard cardItem={item} />})}
+                    {this.state.issueList.items.map((item) => {
+                        return ( <IssueCard cardItem={item} />)})}
                 </div>}
                 {this.state.issueList.length == 0 && <h2>Want to contribute open source! Search the projects with good first issue to contribute</h2>}
             </div></div></div>

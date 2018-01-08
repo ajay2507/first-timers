@@ -21,7 +21,8 @@ class IssueCard extends Component {
                 </div>
                 <div className="card-block">
                     <blockquote className="card-blockquote">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <h4>{card.title}</h4>
+                        <p>{card.body}</p>
                         <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                         <a href={card.html_url} class="card-link">View Issue</a>
                     </blockquote>
