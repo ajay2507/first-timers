@@ -15,7 +15,9 @@ const LangData = [
     {id: '14', name: 'Haskell'},
     {id: '15', name: 'Groovy'},
     {id: '16', name: 'Rust'},
-    {id: '17', name: 'Clojure'}
+    {id: '17', name: 'Clojure'},
+    {id: '18', name: 'react'},
+    {id: '19', name: 'angular'}
 
 ];
 

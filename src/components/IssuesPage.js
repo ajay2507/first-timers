@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import IssuesList from './IssuesList';
 import SearchComponent from './SearchComponent';
 import BadgeComponent from './BadgeComponent';
-import Footer from './Footer';
-
 import GithubCorner from 'react-github-corner';
+import Footer from './Footer';
 import './App.css';
 
 
@@ -30,8 +29,9 @@ class IssuesPage extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2 className="bold">First Timers - Open Source Contribution</h2>
-            <p></p>
+          <h2 className="bold">First Timers - Contribute Open Source!</h2>
+            <p>we are here to help on beginners to contribute open source.</p>
+            <p>search issues based on programming language, read the contributor guidelines and enjoy coding.</p>
         </header>
           <GithubCorner
               href={"https://github.com/ajay2507/first-timers"}

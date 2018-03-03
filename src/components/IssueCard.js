@@ -28,7 +28,7 @@ class IssueCard extends Component {
                 <div className="card-block">
                     <blockquote className="card-blockquote">
                         <h5>{card.title}</h5>
-                        <p>{card.body}</p>
+                        
                         <footer>{card.labels.map((label,index) => {
                             return(<span key={index}  style={divStyle} className="badge label">{label.name}</span>)
                         })}</footer>
