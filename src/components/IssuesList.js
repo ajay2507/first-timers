@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Masonry from 'react-masonry-component';
 import axios from 'axios';
 import IssueCard from  './IssueCard';
 import Pagination from './Pagination';
@@ -37,18 +38,25 @@ class IssuesList extends Component {
     }
     render() {
         return (
-            <div className="container margin-top">
-                <div className="row">
-                    <Pagination pageNo={this.state.pageNo} />
+            <section className="margin-top">
             <div>
-
+                 <h2 className="text-transform">{this.props.language+" "}Projects</h2>
                 {this.state.issueList.items != undefined &&
-                <div className="card-list"><h2>{this.props.language+" "}Projects</h2>
+
+                <div className="card-list">
+                <Masonry
+                className={'my-gallery-class'} // default ''
+                elementType={'ul'} // default 'div'
+                disableImagesLoaded={false} // default false
+                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+                >
                     {this.state.issueList.items.map((item, index) => {
                         return ( <IssueCard cardItem={item} key={index}/>)})}
-                </div>}
+                </Masonry></div>} 
                 {this.state.issueList.length == 0 && <h2>Want to contribute open source! Search the projects with good first issue to contribute.</h2>}
-            </div></div></div>
+           
+           </div>
+         </section>
         );
     }
 }
